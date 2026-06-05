@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bertha Soap Production</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bertha Soap Production</h1>
+        <p>Premium Quality Soaps for washing Dishes, Clothes, and Flawless Floors</p>
+    </header>
+
+    <main>
+        <!-- Product Section -->
+        <section class="product-container">
+            <!-- Product 1: Dish washing Soap -->
+            <div class="product-card" id="dish-card">
+                <h2>Dish washing Liquid</h2>
+                <p class="description">Cuts through tough grease instantly, leaving dishes sparkling clean while remaining gentle on your hands.</p>
+                <button onclick="showFeatures('dish')">View Benefits</button>
+            </div>
+
+            <!-- Product 2: Laundry Detergent -->
+            <div class="product-card" id="laundry-card">
+                <h2>Laundry Detergent</h2>
+                <p class="description">Deeply penetrates fabric fibers to eliminate stains and keep your clothes smelling fresh for days.</p>
+                <button onclick="showFeatures('laundry')">View Benefits</button>
+            </div>
+
+            <!-- Product 3: Floor Cleaner -->
+            <div class="product-card" id="floor-card">
+                <h2>Multi-Surface Floor Cleaner</h2>
+                <p class="description">Perfect for mopping. Removes dirt and grime from tiles, wood, and marble without leaving sticky residues.</p>
+                <button onclick="showFeatures('floor')">View Benefits</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Info Panel controlled by JavaScript -->
+        <section id="info-panel" class="hidden">
+            <h3 id="info-title">Product Details</h3>
+            <p id="info-text"></p>
+        </section>
+
+        <!-- AI Chat Section -->
+        <section id="ai-chat-panel" class="ai-chat-section hidden">
+            <div class="chat-panel-header">
+                <h2>AI Chat</h2>
+                <button class="close-chat-btn" onclick="closeChatPanel()">×</button>
+            </div>
+            <p>Ask about our soap products, manufacturing process or usage here.</p>
+            <div id="chat-box" class="chat-box">
+                <div class="chat-message bot-message">Hello! Ask me anything about our soap services.</div>
+            </div>
+            <div class="chat-input-row">
+                <input id="chat-input" type="text" placeholder="Type your question here..." />
+                <button onclick="handleAIChat()">Send</button>
+            </div>
+        </section>
+
+        <button id="open-chat-btn" class="open-chat-btn" onclick="openChatPanel()">AI Chat</button>
+
+        <hr class="divider">
+
+        <!-- New Contact Section -->
+        <section class="contact-section">
+            <h2>Place Your Order</h2>
+            <p>Get in touch with us today for retail or wholesale inquiries.</p>
+            <button class="order-now-btn" onclick="showOrderForm()">Order Now</button>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong> Location:</strong>
+                    <p>Longuo Primary Route,<br>Near JR Enterprise</p>
+                </div>
+                
+                <div class="contact-item">
+                    <strong> Email Us:</strong>
+                    <p><a href="mailto:johnbertha596@gmail.com">johnbertha596@gmail.com</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>💬 WhatsApp Us:</strong>
+                    <p>
+                        <!-- International format used for the WhatsApp API Link -->
+                        <a href="https://wa.me/255748654693?text=Hello%20Bertha%20Soap%20Production,%20I%20want%20to%20make%20an%20order." target="_blank" class="whatsapp-btn">
+                            Chat on WhatsApp (0748654693)
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="order-form-section" class="order-form-section hidden">
+            <h2>Order Form</h2>
+            <p>Enter your details safely so we can contact you quickly.</p>
+            <form id="order-form" onsubmit="submitOrder(); return false;">
+                <label for="username">Username</label>
+                <input id="username" type="text" placeholder="Username" required />
+
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password" required />
+
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Email" required />
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bertha Soap Production. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
