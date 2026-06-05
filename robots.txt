@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bertha.github.io/Bertha_soap_production/sitemap.xml
