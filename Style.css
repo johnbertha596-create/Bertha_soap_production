@@ -1,0 +1,343 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4679ac;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Layout for Product Cards */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+/* Individual Product Cards */
+.product-card {
+    background: pink;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h2 {
+    color: #2e7d32;
+}
+
+/* Color codes per product type using IDs */
+#dish-card { border-top: 5px solid #f7b44f; }
+#laundry-card { border-top: 5px solid #ba68c8; }
+#floor-card { border-top: 5px solid #81c784; }
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Dynamic Info Panel Section */
+#info-panel {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Layout Divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #cbd5e1;
+    margin: 40px auto;
+    width: 80%;
+}
+/* Contact Section Styling */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-item {
+    background: pink;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 220px;
+}
+
+.contact-item a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Special styling for the WhatsApp button link */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white !important;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+.ai-chat-section,
+.order-form-section {
+    max-width: 420px;
+    margin: 0;
+    padding: 24px;
+    background-color: #f3f6f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ai-chat-section {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 380px;
+    z-index: 100;
+}
+
+.ai-chat-section.hidden {
+    display: none;
+}
+
+.chat-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-panel-header h2 {
+    margin: 0;
+    color: #1e5f3d;
+}
+
+.close-chat-btn {
+    background: #e53935;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ai-chat-section h2,
+.order-form-section h2 {
+    margin-top: 0;
+    color: #1e5f3d;
+}
+
+.chat-box {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    min-height: 220px;
+    padding: 16px;
+    margin: 16px 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message {
+    max-width: 85%;
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    line-height: 1.5;
+}
+
+.bot-message {
+    background-color: #e8f5e9;
+    color: #1c4f2d;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #2e7d32;
+    color: #ffffff;
+    margin-left: auto;
+    text-align: right;
+}
+
+.chat-input-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.chat-input-row input {
+    flex: 1 1 240px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #a3b7c8;
+    font-size: 1rem;
+}
+
+.open-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.open-chat-btn:hover {
+    background-color: #1b5e20;
+}
+
+@media (max-width: 600px) {
+    .ai-chat-section,
+    .order-form-section {
+        right: 10px;
+        left: 10px;
+        width: auto;
+        bottom: 80px;
+        max-width: none;
+    }
+
+    .ai-chat-section {
+        position: fixed;
+    }
+
+    .order-form-section {
+        position: relative;
+        bottom: auto;
+        margin: 20px 10px;
+    }
+
+    .chat-input-row,
+    .order-form-section form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chat-input-row input,
+    .chat-input-row button,
+    .order-form-section input,
+    .order-form-section button[type="submit"] {
+        width: 100%;
+    }
+
+    .chat-input-row button,
+    .order-form-section button[type="submit"] {
+        margin-top: 10px;
+    }
+
+    .open-chat-btn {
+        right: 10px;
+        bottom: 10px;
+        padding: 12px 16px;
+    }
+}
+
+.order-now-btn {
+    margin-top: 20px;
+    background-color: #155724;
+}
+
+.order-form-section form {
+    display: grid;
+    gap: 16px;
+    text-align: left;
+}
+
+.order-form-section label {
+    font-weight: 600;
+}
+
+.order-form-section input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #a3b7c8;
+    font-size: 1rem;
+}
+
+.order-form-section button[type="submit"] {
+    width: fit-content;
+    padding: 12px 24px;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 8px;
+}
+
+.order-form-section button[type="submit"]:hover {
+    background-color: #1b5e20;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
