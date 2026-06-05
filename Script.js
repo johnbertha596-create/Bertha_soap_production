@@ -92,10 +92,10 @@ function submitOrder() {
     const email = document.getElementById('email').value.trim();
 
     if (!username || !password || !email) {
-        alert('Tafadhali jaza fomu yote kabla ya kuendelea.');
+        alert('Please fill out the entire form before proceeding.');
         return;
     }
 
-    alert('Asante! Tumepokea maelezo yako. Tutakuambia hivi karibuni.');
+    alert('Thank you! We have received your details. We will contact you shortly.');
     document.getElementById('order-form').reset();
 }
